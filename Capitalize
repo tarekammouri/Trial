@@ -7,13 +7,13 @@ void main()
     cout << "Inter you word here:" << "\n";
     cin >> word;
     if (word[0] >= 'A' && word[0] <= 'Z') {
-        cout << word[0] << "\n";
+        cout << word << "\n";
     }
     else {
         if (word[0] >= 'a' && word[0] <= 'z') {
             char L = static_cast<char>(word[0]);
-            L = L - 32;
-            cout << L << "\n";
+            word[0] = toupper(L);
+            cout << word << "\n";
         }
         else {
             cout << "invalid word" << "\n";
